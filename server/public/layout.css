@@ -36,6 +36,10 @@
   justify-content: space-around;
 }
 
+.f-justify-content-space-between {
+  justify-content: space-between;
+}
+
 .f-align-items-space-around {
   align-items: space-around;
 }
@@ -176,34 +180,18 @@
 }
 
 .ac-title {
-  display: flex;
-  justify-content: space-between;
+  padding: 0.5rem;
 }
 
-.fr-header {
-  padding: 1rem;
-  min-width: 350px;
-  max-width: 450px;
-}
-
-.fr-header h2 {
-  text-align: center;
-  margin-top: 0;
+.ac-title i,
+.ac-title p {
+  margin: 0;
 }
 
 .fr-basic ul > li {
   width: 50%;
   text-align: center;
-}
-
-div.ac-title {
-  padding: 0.5rem;
-}
-
-.ac-title h4,
-div.ac-title p,
-.ac-title i {
-  margin: 0;
+  font-size: smaller;
 }
 
 .menu-modal {
@@ -293,6 +281,10 @@ div.ac-title p,
   padding: 0.5rem;
 }
 
+.fr-header {
+  text-align: center;
+}
+
 @media screen and (min-width: 700px) {
   .menu-modal {
     position: static;
@@ -337,10 +329,6 @@ div.ac-title p,
   .recipe-card > .rc-image {
     width: 290px;
     height: 250px;
-  }
-
-  .fr-header {
-    margin: auto;
   }
 
   .fr-ingredients > div,

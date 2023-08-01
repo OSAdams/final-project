@@ -40,7 +40,7 @@ export default class Comments extends React.Component {
     return (
       <section className="comments-section">
         <div className="comments-section-header" style={{ textAlign: 'center' }}>
-          <h2>Comments</h2>
+          <h3>Comments</h3>
         </div>
         <div className="comment-form-container text-align-center" style={{ marginBottom: '2rem' }}>
           <CommentForm recipeId={recipeId} />

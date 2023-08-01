@@ -69,6 +69,10 @@ button:active {
   transition: all 300ms ease-in-out;
 }
 
+.ac-content {
+  font-size: smaller;
+}
+
 .recipe-card {
   background-color: #201c2b;
 }
@@ -212,6 +216,19 @@ button:active {
   border-radius: 5px;
   border: solid 1rem var(--alt-dark-color);
   font-size: 12px;
+}
+
+.comment-value > label {
+  font-size: smaller;
+}
+
+.comment-value > textarea {
+  resize: none;
+}
+
+.fr-image {
+  width: 100%;
+  min-height: 200px;
 }
 
 @media screen and (min-width: 700px) {

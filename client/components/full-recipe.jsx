@@ -12,7 +12,8 @@ export default function FullRecipe(props) {
     analyzedInstructions,
     extendedIngredients,
     nutrition,
-    id
+    id,
+    image
   } = props.recipe;
   if (!Array.isArray(analyzedInstructions) || !props.recipe) {
     return <LoadingModal />;
@@ -34,7 +35,10 @@ export default function FullRecipe(props) {
   return (
     <>
       <div className="fr-header">
-        <h2> { title } </h2>
+        <h3> { title } </h3>
+        <div className="fr-image margin-auto" style={{
+          backgroundImage: `url(${image})`
+        }} />
         <div className="fr-basic flex f-justify-content-center">
           <ul className="li-style-none flex f-wrap-wrap">
             <ListGenerator content={ basicContent } />
