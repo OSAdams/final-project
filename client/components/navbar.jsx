@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuModal from './menu-modal';
 import AppContext from '../lib/app-context';
+import Button from './button';
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -103,9 +104,9 @@ export default class NavBar extends React.Component {
                 className="nav-input" />
             </div>
             <div>
-              <button className="nav-button" type="submit">
+              <Button type="submit">
                 Search
-              </button>
+              </Button>
             </div>
           </form>
         </div>
