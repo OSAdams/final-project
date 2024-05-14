@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import Home from './pages/home';
 
 export default function App() {
   const [serverData, setServerData] = useState('');
@@ -30,6 +31,7 @@ export default function App() {
         </a>
       </div>
       <h1>{serverData}</h1>
+      <Home message='Hello World' title='Guess What?' />
     </>
   );
 }
