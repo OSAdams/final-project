@@ -26,6 +26,14 @@ app.get('/api/hello', (req, res) => {
   res.json({ message: 'Hello, World!' });
 });
 
+app.get('/api/recipes/landing/:mealType', (req, res) => {
+  /*
+   *  mealType's value will be assigned on the client side.
+   *  depending on the time of day; breakfast, lunch, or dinner
+   *  meals will be recommended.
+   */
+})
+
 /*
  * Handles paths that aren't handled by any other route handler.
  * It responds with `index.html` to support page refreshes with React Router.
