@@ -18,9 +18,9 @@ app.get('/test', (req, res, next) => {
   res.status(204).json('{ server: "on" }');
 });
 
-app.get('/api/recipes', (req, res, next) => {
-  throw new ClientError(400, 'Use an id number to select a recipe');
-});
+// app.get('/api/recipes/:mealType', (req, res, next) => {
+//   const { mealType } = req.params.id;
+// })
 
 app.get('/api/recipes/:id', (req, res, next) => {
   const id = Number(req.params.id);
