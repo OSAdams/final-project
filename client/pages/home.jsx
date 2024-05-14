@@ -37,9 +37,9 @@ export default class Home extends React.Component {
   render() {
     const { recipes } = this.state;
     const { user } = this.context;
-    // if (!recipes.recipes) {
-    //   return <LoadingModal />;
-    // }
+    if (!recipes) {
+      return <LoadingModal />;
+    }
     return (
       <>
         <div>
@@ -47,7 +47,7 @@ export default class Home extends React.Component {
           <p className="text-align-center">{ user ? `Welcome ${user.username}!` : 'Welcome!' }</p>
           <p className="text-align-center">Here are some recommendations<br />from your local time zone!</p>
         </div>
-        { !recipes ? <LoadingModal /> : <Carousel recipes={ recipes } /> }
+        <Carousel recipes={ recipes } />
       </>
     );
   }

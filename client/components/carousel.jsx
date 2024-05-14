@@ -82,6 +82,8 @@ export default class Carousel extends React.Component {
   render() {
     const { iterator } = this.state;
     const { recipes } = this.props;
+    // eslint-disable-next-line
+    console.log('recipes: ', recipes);
     const { navigateCarousel, loadRecipe } = this;
     return (
       <div className='search-recipe-render'>
@@ -94,7 +96,7 @@ export default class Carousel extends React.Component {
               likes={recipes[iterator].aggregateLikes}
               image={recipes[iterator].image} />
         <div className='carousel-controls flex f-justify-content-space-around'>
-          <button onClick={navigateCarousel} type='button' className='carousel-previous'>
+          <button onClick={ navigateCarousel } type='button' className='carousel-previous'>
             <i className='fa-sharp fa-solid fa-arrow-left txt-shadow' />
           </button>
           <button onClick={ navigateCarousel } type='button' className='carousel-next'>
