@@ -15,14 +15,24 @@ app.use(staticMiddleware);
 app.use(jsonMiddleware);
 
 app.get('/test', (req, res, next) => {
-  res.status(204).json('{ server: "on" }');
+  res.status(200).json({ server: 'Hello World' });
 });
 
-// app.get('/api/recipes/:mealType', (req, res, next) => {
-//   const { mealType } = req.params.id;
-// })
+app.get('/api/recipes/carousel/:mealtype', (req, res, next) => {
+  const { params } = req;
+  res.status(200).json({ params });
+  // if (!mealtype || typeof mealtype !== 'string') throw new ClientError(400, 'mealtype string value required');
+  // fetch(`https://api.spoonacular.com/recipes/complexSearch?query=${mealtype}&apiKey=${process.env.SPOONACULAR_API_KEY}&number=7&addRecipeNutrition=true`)
+  //   .then(res => {
+  //     const result = res.json();
+  //     // eslint-disable-next-line
+  //     const localObject = {};
+  //     console.log('response from spoonacular: ', result);
+  //   })
+  //   .catch(err => console.error({ error: err }));
+});
 
-app.get('/api/recipes/:id', (req, res, next) => {
+app.get('/api/recipes/recipeId/:id', (req, res, next) => {
   const id = Number(req.params.id);
   if (!Number.isInteger(id) || id < 1) {
     throw new ClientError(400, 'id must be a positive whole integer');
