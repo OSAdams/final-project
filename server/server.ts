@@ -28,11 +28,11 @@ app.get('/api/hello', (req, res) => {
 
 // you can use this for multiple fetch calls. use 'carousel' as a pramater as well.
 
-app.get('/api/recipes/carousel/:mealType', (req, res) => {
+app.get('/api/recipes/spoonacular/:mealType', (req, res, next) => {
   if (!req.params.mealType) throw new ClientError(400, 'mealType parameter string value required');
   const { mealType } = req.params
   // if (!mealType || typeof mealType !== 'string') throw new ClientError(400, 'mealType parameter string value required')
-  res.status(200).json({ mealType: mealType })
+  res.status(200).json({ mealType: mealType})
   /*
    *  mealType's value will be assigned on the client side.
    *  depending on the time of day; breakfast, lunch, or dinner
