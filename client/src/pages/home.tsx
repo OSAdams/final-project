@@ -21,6 +21,7 @@ export default function Home(props: { message: string, title: string }) {
     <div>
       <h1>{ props?.title }</h1>
       <p>{ props?.message }</p>
+      <p>{ recipesData }</p>
     </div>
   )
 }
